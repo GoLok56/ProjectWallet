@@ -3,7 +3,6 @@ apply plugin: 'kotlin'
 
 def rxJavaVersion = "2.1.13"
 def rxAndroidVersion = "2.0.2"
-def kotlin_version = '1.2.41'
 
 buildscript {
     repositories {
