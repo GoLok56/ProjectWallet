@@ -4,7 +4,7 @@ import io.reactivex.Single
 
 interface Repository<T> {
     fun getAll(): Single<List<T>>
-    fun edit(item: T): Single<Boolean>
-    fun save(item: T): Single<Boolean>
-    fun remove(itemId: Int): Single<Boolean>
+    fun edit(item: T): Int
+    fun save(item: T): Int
+    fun remove(itemId: Int): Int
 }
