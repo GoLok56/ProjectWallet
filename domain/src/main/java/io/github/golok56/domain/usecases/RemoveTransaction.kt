@@ -9,8 +9,13 @@ class RemoveTransaction(
         transformer: Transformer<Int>,
         private val transactionRepository: Repository<TransactionEntity>
 ) : UseCase<Int>(transformer) {
-    fun remove(itemId: Int): Single<Int> = observable(itemId)
+    private var transaction: TransactionEntity? = null
+
+    fun remove(transaction: TransactionEntity): Single<Int> {
+        this.transaction = transaction
+        return observable(null)
+    }
 
     override fun createObservable(item: Int?): Single<Int> =
-            Single.fromCallable { transactionRepository.remove(item?: -1) }
+            Single.fromCallable { transactionRepository.remove(transaction!!) }
 }
