@@ -6,5 +6,5 @@ interface Repository<T> {
     fun getAll(): Single<List<T>>
     fun edit(item: T): Int
     fun save(item: T): Int
-    fun remove(itemId: Int): Int
+    fun remove(itemId: T): Int
 }
