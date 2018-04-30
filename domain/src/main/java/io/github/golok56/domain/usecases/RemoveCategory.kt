@@ -11,9 +11,9 @@ class RemoveCategory(
 ) : UseCase<Int>(transformer) {
     private var category: CategoryEntity? = null
 
-    fun remove(category: CategoryEntity) {
+    fun remove(category: CategoryEntity): Single<Int> {
         this.category = category
-        observable(null)
+        return observable(null)
     }
 
     override fun createObservable(item: Int?): Single<Int> =

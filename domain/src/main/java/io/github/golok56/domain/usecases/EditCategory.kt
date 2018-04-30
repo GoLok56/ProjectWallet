@@ -11,9 +11,9 @@ class EditCategory(
 ) : UseCase<Int>(transformer) {
     private var category: CategoryEntity? = null
 
-    fun edit(category: CategoryEntity) {
+    fun edit(category: CategoryEntity): Single<Int> {
         this.category = category
-        observable(null)
+        return observable(null)
     }
 
     override fun createObservable(item: Int?): Single<Int> =
