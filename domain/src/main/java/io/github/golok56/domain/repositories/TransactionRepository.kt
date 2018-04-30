@@ -5,7 +5,7 @@ import io.reactivex.Single
 
 interface TransactionRepository {
     fun getTransactions(): Single<List<TransactionEntity>>
-    fun deleteTransaction()
-    fun editTransaction(): Single<TransactionEntity>
-    fun saveTransaction(): Single<TransactionEntity>
+    fun deleteTransaction(transactionId: Int): Single<Boolean>
+    fun editTransaction(transaction: TransactionEntity): Single<TransactionEntity>
+    fun saveTransaction(transaction: TransactionEntity): Single<TransactionEntity>
 }
