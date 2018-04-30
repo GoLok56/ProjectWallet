@@ -7,11 +7,15 @@ import io.reactivex.Single
 
 class EditTransaction(
         transformer: Transformer<Int>,
-        private val transactionRepository: Repository<TransactionEntity>,
-        private val transaction: TransactionEntity
+        private val transactionRepository: Repository<TransactionEntity>
 ) : UseCase<Int>(transformer) {
-    fun edit(): Single<Int> = observable(null)
+    private var transaction: TransactionEntity? = null
+
+    fun edit(transaction: TransactionEntity): Single<Int> {
+        this.transaction = transaction
+        return observable(null)
+    }
 
     override fun createObservable(item: Int?): Single<Int> =
-            Single.fromCallable { transactionRepository.edit(transaction) }
+            Single.fromCallable { transactionRepository.edit(transaction!!) }
 }
