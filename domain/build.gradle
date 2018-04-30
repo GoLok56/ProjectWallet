@@ -3,6 +3,8 @@ apply plugin: 'kotlin'
 
 def rxJavaVersion = "2.1.13"
 def rxAndroidVersion = "2.0.2"
+def mockitoVersion = "2.18.3"
+def junitVersion = "4.12"
 
 buildscript {
     repositories {
@@ -34,6 +36,8 @@ dependencies {
     implementation "io.reactivex.rxjava2:rxjava:$rxJavaVersion"
     implementation "io.reactivex.rxjava2:rxandroid:$rxAndroidVersion"
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+    testImplementation "junit:junit:$junitVersion"
+    testImplementation "org.mockito:mockito-core:$mockitoVersion"
 }
 
 sourceCompatibility = "1.7"
