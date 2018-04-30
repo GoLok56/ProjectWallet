@@ -10,4 +10,3 @@ data class TransactionEntity (
         var categoryId: Int
 )
 
-enum class TransactionType { EXPENSE, INCOME }
