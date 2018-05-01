@@ -24,4 +24,6 @@ dependencies {
     testImplementation "android.arch.persistence.room:testing:$roomVersion"
     implementation "io.reactivex.rxjava2:rxjava:$rxJavaVersion"
     implementation project(path: ':domain')
+    implementation "com.google.dagger:dagger-android:$daggerVersion"
+    kapt "com.google.dagger:dagger-android-processor:$daggerVersion"
 }
