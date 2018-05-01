@@ -33,7 +33,7 @@ class TransactionRepository(
 
     override fun save(item: TransactionEntity): Int {
         cache.add(item)
-        return transactionDao.insert(entityToDataMapper.mapFrom(item))
+        return transactionDao.insert(entityToDataMapper.mapFrom(item)).toInt()
     }
 
     override fun remove(item: TransactionEntity): Int {

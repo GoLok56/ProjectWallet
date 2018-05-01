@@ -33,7 +33,7 @@ class CategoryRepository(
 
     override fun save(item: CategoryEntity): Int {
         cache.add(item)
-        return categoryDao.insert(entityToDataMapper.mapFrom(item))
+        return categoryDao.insert(entityToDataMapper.mapFrom(item)).toInt()
     }
 
     override fun remove(item: CategoryEntity): Int {
