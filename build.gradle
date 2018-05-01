@@ -9,6 +9,7 @@ buildscript {
         junitVersion = "4.12"
         roomVersion = "1.0.0"
         daggerVersion = "2.15"
+        androidTestRunnerVersion = "1.0.1"
         minSdkVersion = 21
         targetSdkVersion = 27
     }
