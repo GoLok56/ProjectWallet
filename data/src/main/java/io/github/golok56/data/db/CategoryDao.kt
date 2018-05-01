@@ -10,7 +10,7 @@ interface CategoryDao {
     fun getAll(): Single<List<CategoryData>>
 
     @Insert
-    fun insert(category: CategoryData): Int
+    fun insert(category: CategoryData): Long
 
     @Delete
     fun delete(category: CategoryData): Int

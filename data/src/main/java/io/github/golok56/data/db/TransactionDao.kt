@@ -10,7 +10,7 @@ interface TransactionDao {
     fun getAll(): Single<List<TransactionData>>
 
     @Insert
-    fun insert(transaction: TransactionData): Int
+    fun insert(transaction: TransactionData): Long
 
     @Delete
     fun delete(transaction: TransactionData): Int
