@@ -10,8 +10,8 @@ buildscript {
         roomVersion = "1.0.0"
         daggerVersion = "2.15"
         androidTestRunnerVersion = "1.0.1"
-        minSdkVersion = 21
-        targetSdkVersion = 27
+        minSdk = 21
+        targetSdk = 27
     }
     repositories {
         google()
