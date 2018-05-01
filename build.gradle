@@ -8,6 +8,7 @@ buildscript {
         mockitoVersion = "2.18.3"
         junitVersion = "4.12"
         roomVersion = "1.0.0"
+        daggerVersion = "2.15"
         minSdkVersion = 21
         targetSdkVersion = 27
     }
