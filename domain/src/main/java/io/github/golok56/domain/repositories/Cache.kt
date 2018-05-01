@@ -4,6 +4,7 @@ import io.reactivex.Single
 
 interface Cache<T> {
     fun isEmpty(): Boolean
+    fun addAll(items: List<T>)
     fun add(item: T)
     fun remove(item: T)
     fun edit(item: T)
